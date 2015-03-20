@@ -17,9 +17,6 @@ set nocompatible
 " Automatically change working directory to the directory of the open file.
 set autochdir
 
-" Turn on incremental search to highlight matches as I type search text.
-set incsearch
-
 " Enable syntax highlighting.
 syntax on
 
