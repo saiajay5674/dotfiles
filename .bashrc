@@ -1,18 +1,12 @@
-alias ll='ls -AlF'
-alias vnpm='npm --registry http://192.168.211.100:5984/registry/_design/app/_rewrite'
-alias ssh-alex="ssh alex-mbp.local"
-source ~/.shell_prompt.sh
-export NVM_DIR=~/.nvm
-source ~/.nvm/nvm.sh
-
-function vim() {
-  if test $# -gt 0; then
-    env vim "$@"
-  elif test -f Session.vim; then
-    env vim -S
-  else
-    env vim -c Obsession
+function nvm {
+  if [$1 = "install"]; then
+    nvm install $2 --reinstall-packages-from=default
   fi
 }
+
+alias ll='ls -AlF'
+source ~/.shell_prompt.sh
+export NVM_DIR=~/.nvm
+source $(brew --prefix nvm)/nvm.sh
 
 HISTCONTROL=ignoreboth
