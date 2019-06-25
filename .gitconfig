@@ -1,0 +1,30 @@
+[user]
+  email = saikrishnan.ajayakumar@rackspace.com 
+  name = Sai Ajayakumar
+[push]
+  default = simple
+	followTags = true
+[diff]
+  tool = bc4
+[difftool]
+  prompt = false
+[difftool "bc4"]
+  trustExitCode = true
+  cmd = `/usr/local/bin/bcomp $LOCAL $REMOTE`
+[merge]
+  tool = bc4
+[mergetool]
+  prompt = false
+	keepBackup = false
+[mergetool "bc4"]
+  trustExitCode = true
+  cmd = `/usr/local/bin/bcomp $LOCAL $REMOTE $BASE $MERGED`
+[core]
+  editor = vim
+  excludesfile = /Users/chev/.gitignore_global
+[difftool "sourcetree"]
+	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
+	path = 
+[mergetool "sourcetree"]
+	cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
+	trustExitCode = true
